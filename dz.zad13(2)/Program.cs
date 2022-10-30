@@ -1,4 +1,4 @@
-﻿void FindNumber(int x)
+﻿void FindDigit(int x)
 {
 int number = x;
 if(number > 99)
@@ -25,5 +25,5 @@ while (!int.TryParse(Console.ReadLine()!, out x)){
    Console.WriteLine("Введите число:");
 }
 
-FindNumber(x);
+FindDigit(x);
 
