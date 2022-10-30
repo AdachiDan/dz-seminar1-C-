@@ -4,15 +4,14 @@ int GenerateRandomNumber()
     return new Random().Next(100, 1000);
 }
 
- 
-// 1. Сгенерировать случайное число на отрезке
+
+ int GetSecondNumber(int randomNumber)
+ {
+    Console.WriteLine("Сгенерировали число в диапазоне [100, 999]: " + randomNumber);
+    int sotni = randomNumber / 100;
+    int yedinitsy = randomNumber % 10;
+    return sotni*10 + yedinitsy;
+ }
+
 int randomNumber = GenerateRandomNumber();
- Console.WriteLine("Сгенерировали число в диапазоне [100, 999]: " + randomNumber);
-// 2. Найти отдельно сотни, десятки, единицы
-
-int sotni = randomNumber / 100;
-
-int yedinitsy = randomNumber % 10;
-    
-// 3. Показать результат
-Console.Write("Число: " + sotni + yedinitsy);
+ Console.Write("Число: " + GetSecondNumber(randomNumber));
