@@ -1,8 +1,11 @@
-﻿void result(int x)
+﻿bool multiplicity(int x)
 {
-int ost1 = x % 7;
-int ost2 = x % 23;
-    if (ost1 == 0 && ost2 == 0)
+    return x % 7 == 0 && x % 23 == 0;
+}
+
+void result(int x)
+{
+    if (multiplicity(x))
     {
         Console.WriteLine("Число " + x + " кратно 23 и 7");
     }
