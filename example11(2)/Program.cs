@@ -11,7 +11,7 @@ int randomNumber = GenerateRandomNumber();
 // 2. Найти отдельно сотни, десятки, единицы
 
 int sotni = randomNumber / 100;
-int desyatki = randomNumber / 10;
+
 int yedinitsy = randomNumber % 10;
     
 // 3. Показать результат
