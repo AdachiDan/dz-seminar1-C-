@@ -1,12 +1,12 @@
 ﻿void Weekend(int x)
 {
-    if (x == 6 || x == 7)
+    if (SatSun(x))
     {
         Console.WriteLine("Выходной (Да)");
     }
     else
     {
-       if((0<x)&&(x<6))
+       if(WorkDays(x))
        {
         Console.WriteLine("Не выходной (Нет)");
        }
@@ -17,6 +17,16 @@
         
     }
 
+}
+
+bool SatSun(int x)
+{
+    return x == 6 || x == 7;
+}
+
+bool WorkDays(int x)
+{
+    return (0<x)&&(x<6);
 }
 
 Console.WriteLine("Проверка на выходной");
