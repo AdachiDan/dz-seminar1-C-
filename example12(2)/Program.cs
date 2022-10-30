@@ -1,14 +1,4 @@
-﻿
-Console.WriteLine("Проверка: второе число кратно первому?");
-Console.WriteLine("Введите первое число:");
-string inputString = Console.ReadLine()!;
-int x = int.Parse(inputString);
-
-Console.WriteLine("Введите второе число:");
-string inputString2 = Console.ReadLine()!;
-int x2 = int.Parse(inputString2);
-
-void result(int x, int x2)
+﻿void result(int x, int x2)
 {
 
     int x3 = x % x2;
@@ -24,4 +14,22 @@ void result(int x, int x2)
 
 }
 
+Console.WriteLine("Проверка: второе число кратно первому?");
+Console.WriteLine("Введите первое число:");
+
+int x;
+
+while (!int.TryParse(Console.ReadLine()!, out x)){
+   Console.WriteLine("Неверный ввод");
+   Console.WriteLine("Введите первое число:");
+}
+Console.WriteLine("Введите второе число:");
+
+int x2;
+
+while (!int.TryParse(Console.ReadLine()!, out x2)){
+   Console.WriteLine("Неверный ввод");
+   Console.WriteLine("Введите второе число:");
+}
 result(x, x2);
+
