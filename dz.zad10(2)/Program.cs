@@ -1,8 +1,10 @@
-﻿void GetSecondDigit(int x)
+﻿int GetSecondDigit(int x)
 {
     int desyatki = x / 10;
     int iskomoe = desyatki % 10;  
-    Console.WriteLine("Вторая цифра: " + iskomoe);
+   // Console.WriteLine("Вторая цифра: " + iskomoe);
+    x = iskomoe;
+    return (x);
 }
 
 Console.WriteLine("Нахождение второй цифры трехзначного числа");
@@ -15,4 +17,5 @@ while (!int.TryParse(Console.ReadLine()!, out x)){
    Console.WriteLine("Введите трехзначное число:");
 }
 
-GetSecondDigit(x);
+//GetSecondDigit(x);
+Console.WriteLine("Вторая цифра: " + GetSecondDigit(x));
